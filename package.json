@@ -1,0 +1,21 @@
+{
+  "name": "github-monitoring-docker-prometheus-grafana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add . && git commit -m Build && git push",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegasbrianc/github-monitoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vegasbrianc/github-monitoring/issues"
+  },
+  "homepage": "https://github.com/vegasbrianc/github-monitoring#readme"
+}
