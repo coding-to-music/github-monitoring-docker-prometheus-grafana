@@ -52,7 +52,7 @@ services:
     environment:
       # - REPOS=freeCodeCamp/freeCodeCamp, docker/docker
       # - GITHUB_TOKEN=<GitHub API Token see README>
-      - REPOS="${REPOS}"
-      - GITHUB_TOKEN="${GITHUB_TOKEN}"
+      - REPOS=${REPOS}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
     networks:
       - back-tier
