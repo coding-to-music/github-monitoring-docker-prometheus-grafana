@@ -26,6 +26,33 @@ git remote add origin git@github.com:coding-to-music/github-monitoring-docker-pr
 git push -u origin main
 ```
 
+# GitHub metrics exporter
+
+```
+  metrics:
+    tty: true
+    stdin_open: true
+    expose:
+      - 9171
+    ports:
+      - 9171:9171
+    image: infinityworks/github-exporter:latest
+    environment:
+      - REPOS=freeCodeCamp/freeCodeCamp, docker/docker
+      - GITHUB_TOKEN=<GitHub API Token see README>
+    networks:
+      - back-tier
+
+```
+
+## Results
+
+Need to use a .env file to store the GitHub token
+
+Grafana http://localhost:3000
+
+## Original README:
+
 [![Build Status](https://travis-ci.org/vegasbrianc/github-monitoring.svg?branch=master)](https://travis-ci.org/vegasbrianc/github-monitoring)
 
 # A Docker Stack which Monitors your GitHub Repos
