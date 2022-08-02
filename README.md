@@ -42,7 +42,6 @@ git push -u origin main
       - GITHUB_TOKEN=<GitHub API Token see README>
     networks:
       - back-tier
-
 ```
 
 ## Results
@@ -50,6 +49,26 @@ git push -u origin main
 Need to use a .env file to store the GitHub token
 
 Grafana http://localhost:3000
+
+## metrics exporter
+
+```
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0439] All Metrics successfully collected
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/docker/docker?per_page=100
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/freeCodeCamp/freeCodeCamp?per_page=100
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/docker/docker/releases
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/docker/docker/pulls
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] API data fetched for repository: https://api.github.com/repos/docker/docker?per_page=100
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/freeCodeCamp/freeCodeCamp/releases
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] Fetching https://api.github.com/repos/freeCodeCamp/freeCodeCamp/pulls
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] API data fetched for repository: https://api.github.com/repos/freeCodeCamp/freeCodeCamp?per_page=100
+github-monitoring-docker-prometheus-grafana-metrics-1     | INFO[0444] All Metrics successfully collected
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Running 3/3
+ ⠿ Container github-monitoring-docker-prometheus-grafana-grafana-1     Stopped              0.4s
+ ⠿ Container github-monitoring-docker-prometheus-grafana-prometheus-1  Stopped              0.2s
+ ⠿ Container github-monitoring-docker-prometheus-grafana-metrics-1     Stopped              0.2s
+```
 
 ## Original README:
 
